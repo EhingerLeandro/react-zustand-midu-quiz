@@ -1,4 +1,4 @@
-import React from 'react'
+
 import useDataQuestion from "./hooks/useDataQuestion.tsx";
 
 
@@ -10,7 +10,7 @@ const Footer = () => {
         <strong>
             <span style={{color:"green"}}> &#10003; </span>{correct} correct  / 
             <span style={{color:"red"}}> &#10007; </span>{incorrect} incorrect /  
-            Sin responder: {unanswered}
+            Pending: {unanswered}
         </strong>
     </footer>
   )

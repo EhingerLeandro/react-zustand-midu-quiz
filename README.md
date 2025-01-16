@@ -1,3 +1,8 @@
 ### REACT + ZUSTAND JAVASCRIPT QUIZ
 
 This is a Javascript Quiz App built with React and Zustand; it also uses Typescript and Tailwind CSS.
+
+---
+
+Esta es una aplicación de prueba de Javascript creada con React y Zustand; también utiliza Typescript y Tailwind CSS.
+

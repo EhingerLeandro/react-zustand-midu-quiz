@@ -9,6 +9,9 @@ interface State {
     currentQuestion: number //This is the current position
     fetchQuestions: (limit: number) => Promise<void>;
     selectAnswer: (questionId: number, answerIndex: number) => void;
+    goNextQuestion: () => void;
+    goPreviousQuestion: () => void;
+    goReset: () => void;
 }
 
 //Here we are creating our store

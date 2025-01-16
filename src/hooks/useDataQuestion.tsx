@@ -1,5 +1,4 @@
 import {useQuestionsStore} from "../store/questions";
-import React from 'react'
 
 const useDataQuestion = () => {
     const questions = useQuestionsStore(state=>state.questions);
