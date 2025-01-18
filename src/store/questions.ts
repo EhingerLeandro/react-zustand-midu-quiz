@@ -2,6 +2,7 @@ import {create} from 'zustand'
 import {type Question} from '../types'
 import confetti from "canvas-confetti"
 import {persist} from 'zustand/middleware'
+import {dbQuestions} from "../data/dataInfo.ts";
 
 //This is the type of our store
 interface State {
@@ -24,11 +25,15 @@ export const useQuestionsStore = create<State>()(persist((set, get) =>{
 
         //This section is for our actions
         fetchQuestions: async (limit: number) => {
-            const res = await fetch("http://localhost:5173/data.json");
+           /* const res = await fetch("http://localhost:5173/data.json");
             const data = await res.json();
             //This part is used to reorder the questions
             const questions = data.sort(()=>Math.random() - 0.5).slice(0, limit);
-            set({questions})
+            set({questions}) */
+
+            //This part is used to reorder the questions, that come from a .js file instead of a server.
+            const questionsSorted = dbQuestions.sort(()=>Math.random() - 0.5).slice(0, limit);
+            set({questions:questionsSorted});
         },
         //Here we are using the structered clone
         selectAnswer: (questionId: number, answerIndex: number) => {
